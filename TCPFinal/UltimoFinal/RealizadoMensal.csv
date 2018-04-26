@@ -1,0 +1,108 @@
+JANEIRO,,,
+DESCRIÇÃO DA CONTA,CÓDIGO,DEBITO,CREDITO
+  RESULTADO - ,100,614.989,536.602
+    RESULTADO OPERACIONAL - ,101,576.932,533.832
+      RESULTADO BRUTO - ,2394,271.509,532.415
+        RECEITA LIQUIDA - ,103,0,529.056
+           Receita de Produtos - ,104,0,133.615
+           Receita de Servicos - ,119,0,395.441
+        (-) DEDUCOES DE VENDAS - ,2396,51.436,2.959
+           Devolucoes - ,105,23.949,2.480
+           ICMS - ,106,367,0
+           ISSQN s/ Servicos - ,107,7.912,479
+           Pis s/ Faturamento - ,108,3.421,0
+           Cofins - ,109,15.788,0
+        CUSTO PRODUTOS/SERVICOS VENDIDOS - ,110,174.109,46
+           Compra de Embalagens - ,111,2.112,0
+           Servicos de Terceiros PJ - ,116,158.021,46
+           Custos de Viagens - ,2697,13.976,0
+        CUSTO COM PESSOAL - ,120,45.964,355
+           Salarios - ,121,6.838,0
+           Comissoes - ,122,44,0
+           Ferias - ,123,815,0
+           13o Salario - ,124,611,0
+           INSS - ,125,2.347,0
+           FGTS - ,126,701,0
+           Vale Transporte - ,127,2.990,102
+           Vale Refeicao - ,128,7.422,88
+           Treinamento - ,129,66,0
+           Estagiarios - ,130,22.756,162
+           Assistencia Medica - ,131,1.376,3
+      DESPESAS OPERACIONAIS - ,2398,305.423,1.417
+        DESPESAS COMERCIAIS - ,133,117.249,0
+           Comissoes Revenda - ,134,8.798,0
+           Eventos e Convencoes - ,135,4.047,0
+           Viagens e Estadias - ,136,8.727,0
+           Correios - ,137,7.755,0
+           Publicidade - ,138,1.653,0
+           Prestação de Serviço Paquener - ,1125,22.759,0
+           Serv Terceiros PJ - ,355,54.637,0
+           Telefones - Celulares - ,162,8.249,0
+           Telefones - Fixos - ,161,245,0
+           Brindes - ,2718,379,0
+        DESPESAS COM PESSOAL - ,142,89.225,739
+           Salarios - ,143,6.198,0
+           Comissoes - ,144,15.176,0
+           Ferias - ,145,3.227,0
+           13o Salario - ,146,2.420,0
+           INSS - ,147,9.296,0
+           FGTS - ,148,2.775,0
+           Vale Transporte - ,149,2.821,414
+           Vale Refeicao - ,150,5.925,152
+           Treinamento - ,151,550,0
+           Estagiarios - ,152,37.503,0
+           Assistencia Medica - ,153,3.334,173
+        DESPESAS ADMINISTRATIVAS - ,156,81.654,353
+           Prestacao Servico P Fisica - ,157,20,0
+           Prestacao Servico P Juridica - ,158,33.704,0
+           Seguros - ,159,39,0
+           Impostos Taxas e Contribuicoes - ,165,1.488,0
+           Multas - ,166,3.029,0
+           Alugueis - ,168,9.295,0
+           Desp c/ Veiculos e Combustiveis - ,169,1.604,0
+           Transportes e Conducao - ,170,1.419,0
+           Encargos de Depreciacao - ,172,1.922,0
+           Encargos de Amortizacao - ,184,13.312,0
+           Telefones Celulares - ,219,1.208,0
+           Telefones Fixos - ,218,5,0
+           Crachas - ,2987,14,0
+           Energia Eletrica - ,173,2.839,353
+           Internet - ,118,1.610,0
+           Conservacao e Manutencao - ,175,410,0
+           Material de Limpeza - ,176,175,0
+           Copa e Cozinha - ,177,537,0
+           Lanches e Refeicoes - ,178,363,0
+           Material de Escritorio - ,179,8.268,0
+           Fotocopias e Autenticacoes - ,180,87,0
+           Impressos - ,182,10,0
+           Despesas com Eventos - ,183,97,0
+           Outras Despesas Administrativas - ,214,198,0
+        DESPESAS COM PESSOAL - ,2401,17.274,325
+           Salarios - ,300,4.112,0
+           Ferias - ,302,574,0
+           13o Salario - ,303,432,0
+           INSS - ,304,2.285,0
+           FGTS - ,305,494,0
+           Vale Transporte - ,306,1.041,177
+           Vale Refeicao - ,307,1.887,126
+           Estagiarios - ,309,2.646,0
+           Assistencia Medica - ,310,1.061,22
+           Pro-Labore - ,155,2.743,0
+        DESPESAS COM P&D - ,312,21,0
+           Seguros - ,316,21,0
+    RESULTADO FINANCEIRO - ,185,38.057,2.771
+      RESULTADO FINANCEIRO - ,186,38.057,2.771
+        RESULTADO FINANCEIRO - ,187,38.057,182
+           Juros S/Emprestimos - ,188,11.556,0
+           Despesas Bancarias - ,189,5.445,0
+           IOF - ,190,597,0
+           CPMF - ,191,504,0
+           Juros s/Tributos - ,2546,13.094,0
+           Pis s/ Outras Receitas - ,215,7,0
+           Taxa Adm Cartao de Credito - ,2622,5.647,182
+           Cofins s/ Outras Receitas - ,216,33,0
+           Juros Pagos a Fornecedores - ,2547,546,0
+           Descontos Concedidos - ,217,627,0
+        RECEITAS FINANCEIRAS - ,193,0,2.589
+           Descontos Obtidos - ,194,0,0
+           Juros Recebidos - ,196,0,2.589
