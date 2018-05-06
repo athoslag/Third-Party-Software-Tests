@@ -51,8 +51,51 @@ public class FileInterpreterTest {
 			fail("Should not throw exeption ".concat(e.getMessage()));
 			e.printStackTrace();
 		}
+		
+		try {
+			// In the file are all bad situations, such as blank line os rubrics without code.
+			BudgetItemController<Rubric, RubricPerYear> budgetController = fileInterpreter.readBudgetItemHistoryFile("a", 2017);
+			ArrayList<BudgetItem> budgetItemList = budgetController.getBudgetItemList(); 
+			assertNull("Code from invalid line does not exists",
+					budgetController.findByCode(budgetItemList, 10000));
+			assertNotNull("Code from a valid line exists",
+					budgetController.findByCode(budgetItemList, 103));
+			assertCodesAreNotNull(budgetItemList);
+		} catch (InstantiationException e) {
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
+		} catch (IOException e) {
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
+		} catch (ParseException e) {
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
+		}
 	}
 
+	@Test
+	public void testIsMonthValuesFileLineValid() throws ParseException {
+		try {
+			BudgetItemController<Rubric, RubricPerYear> budgetController = fileInterpreter.readBudgetItemHistoryFile("tests", 2017);
+			ArrayList<BudgetItem> budgetItemList = budgetController.getBudgetItemList();
+			fileInterpreter.readRealValuesFile("tests", budgetItemList, 2017);
+		} catch (InstantiationException e) {
+		
+		} catch (IOException e) {
+			
+		} catch (NumberFormatException e) {
+			
+		} catch (IllegalAccessException e) {
+			
+		}
+	}
+	
 	@Test
 	public void testReadBudgetItemHistoryFileNotFoundFile() {
 		try {
