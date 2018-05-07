@@ -81,18 +81,35 @@ public class FileInterpreterTest {
 
 	@Test
 	public void testIsMonthValuesFileLineValid() throws ParseException {
-		try {
-			BudgetItemController<Rubric, RubricPerYear> budgetController = fileInterpreter.readBudgetItemHistoryFile("tests", 2017);
-			ArrayList<BudgetItem> budgetItemList = budgetController.getBudgetItemList();
-			fileInterpreter.readRealValuesFile("tests", budgetItemList, 2017);
-		} catch (InstantiationException e) {
 		
+		
+		try {
+			BudgetItemController<Rubric, RubricPerYear> budgetController = fileInterpreter.readBudgetItemHistoryFile("RealizadoMensal", 2017);
+			ArrayList<BudgetItem> budgetItemList = budgetController.getBudgetItemList();
+		
+			fileInterpreter.readRealValuesFile("RealizadoMensal", budgetItemList, 2017);
+			
+			// versão de um relatorio p/ testes:
+			BudgetItemController<Rubric, RubricPerYear> budgetController2 = fileInterpreter.readBudgetItemHistoryFile("oFamoso", 1999);
+			ArrayList<BudgetItem> budgetItemList2 = budgetController2.getBudgetItemList();
+		
+			fileInterpreter.readRealValuesFile("oFamoso", budgetItemList2, 1999);
+			
+		} catch (InstantiationException e) {
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
 		} catch (IOException e) {
-			
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
 		} catch (NumberFormatException e) {
-			
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
 		} catch (IllegalAccessException e) {
-			
+			fail("Should not throw exeption ".concat(e.getMessage()));
+			e.printStackTrace();
 		}
 	}
 	
