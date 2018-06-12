@@ -77,7 +77,7 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 	@Override
 	public void loadMenuFile(String filePath) {
 		try {
-			uiController.setUpYear(2017);
+			uiController.setUpYear(2018);
 			uiController.readHistoryFile(filePath);
 			validHistoricFile = true;
 			menuWindow.setAviso(filePath + "  foi carregado com sucesso!");
@@ -85,7 +85,7 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 		} catch (FileNotFoundException e) {
 			menuWindow.setAviso("O arquivo selecionado nao foi encontrado.");
 		} catch (IOException e) {
-			menuWindow.setAviso("O arquivo selecionado nao é valido como arquivo de histórico");
+			menuWindow.setAviso("O arquivo selecionado nao ï¿½ valido como arquivo de histï¿½rico");
 		}
 	}
 
@@ -101,14 +101,14 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 				calculatorWindow.openWindow();
 				budgetItems = uiController.getBudgetItemInformation(actualYear, false);
 				calculatorWindow.showTextUser(
-						"Selecione a data limite para fazer modificações no ano que vem inserindo o mês e dia no formato mm/dd");
+						"Selecione a data limite para fazer modificaï¿½ï¿½es no ano que vem inserindo o mï¿½s e dia no formato mm/dd");
 			} else {
-				menuWindow.setAviso("Você já fez previsão nesse ano para o ano que vem");
+				menuWindow.setAviso("Vocï¿½ jï¿½ fez previsï¿½o nesse ano para o ano que vem");
 			}
 
 		} else {
 			menuWindow.setAviso(
-					"Nenhum arquivo histórico foi selecionado. Por favor selecione um arquivo válido para poder prosseguir");
+					"Nenhum arquivo histï¿½rico foi selecionado. Por favor selecione um arquivo vï¿½lido para poder prosseguir");
 		}
 	}
 
@@ -122,7 +122,7 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 			viewerWindow.openWindow();
 			viewerWindow.setYears(uiController.getYears());
 		} else {
-			menuWindow.setAviso("Não há previsões a serem vistas ainda");
+			menuWindow.setAviso("Nï¿½o hï¿½ previsï¿½es a serem vistas ainda");
 		}
 	}
 
@@ -141,7 +141,7 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 			if (today.before(lastLimitDate)) {
 				openModifyPrevisionWindow();
 			} else {
-				menuWindow.setAviso("Não há previsão atual disponivel para modificar");
+				menuWindow.setAviso("Nï¿½o hï¿½ previsï¿½o atual disponivel para modificar");
 				modifyng = false;
 			}
 		} catch (ParseException ex) {
@@ -156,7 +156,7 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 		menuWindow.closeWindow();
 		budgetItems = uiController.getBudgetItemInformation(year, false);
 		calculatorWindow.openWindow();
-		calculatorWindow.showTextUser("Selecione um mês");
+		calculatorWindow.showTextUser("Selecione um mï¿½s");
 		modifyng = true;
 	}
 
@@ -197,7 +197,7 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 		int yearIndex = year - 1;
 		budgetItems = uiController.getBudgetItemInformation(yearIndex, true);
 		List<Quintuple> actualMonthDetails = uiController.getMonthlyBudgetDetails(budgetItems, month, yearIndex + 1);
-		viewerWindow.showTextUser("Vá escolhendo entre os meses que quiser ou troque de ano");
+		viewerWindow.showTextUser("Vï¿½ escolhendo entre os meses que quiser ou troque de ano");
 		viewerWindow.fillViewerWindowList(actualMonthDetails);
 	}
 
@@ -211,7 +211,7 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 	public void selectedYearView(String month, Integer year) {
 		int yearIndex = year - 1;
 		budgetItems = uiController.getBudgetItemInformation(yearIndex, true);
-		viewerWindow.showTextUser("Escolha um mês");
+		viewerWindow.showTextUser("Escolha um mï¿½s");
 
 		if (year - 1 == lastYearPredicted) {
 			viewerWindow.enableLoaderFile();
@@ -232,9 +232,9 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 			viewerWindow.showTextUser("Realizado Mensal carregado! Selecione os meses para recarregar");
 			viewerWindow.clearTable();
 		} catch (FileNotFoundException e) {
-			System.out.println("O arquivo selecionado não foi encontrado.");
+			System.out.println("O arquivo selecionado nï¿½o foi encontrado.");
 		} catch (IOException e) {
-			System.out.println("O arquivo selecionado não é válido como arquivo de realizado mensal");
+			System.out.println("O arquivo selecionado nï¿½o ï¿½ vï¿½lido como arquivo de realizado mensal");
 		}
 	}
 
@@ -351,7 +351,7 @@ public class GUIManager implements UserMenu, BudgetViewer, BudgetCalculator {
 			List<Triple> itemDetails = uiController.extractItemsDescription(budgetItems, monthIndex);
 			calculatorWindow.fillRubricLists(itemDetails, modifyng);
 		} else {
-			calculatorWindow.showTextUser("Não há nada que mostrar esse mês, todas as rubricas de "
+			calculatorWindow.showTextUser("Nï¿½o hï¿½ nada que mostrar esse mï¿½s, todas as rubricas de "
 					+ MonthsController.getMonthName(monthIndex)
 					+ " ja foram alteradas\nSe quiser modificar o mes de novo salve as alteracoes e modifique novamente");
 		}
